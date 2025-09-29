@@ -1392,7 +1392,7 @@ Transform:
   m_GameObject: {fileID: 475635663}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.86, y: 8.08, z: 0.07449646}
+  m_LocalPosition: {x: -5.2, y: 7.1, z: 0.07449646}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1412,11 +1412,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 10
   rb: {fileID: 475635668}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  groundCheck: {fileID: 475635664}
-  groundCheckRadius: 0.1
 --- !u!114 &475635666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2017,8 +2012,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.545
-  m_Color: {r: 0.03529412, g: 0.6767071, b: 1, a: 1}
-  m_Intensity: 0.3
+  m_Color: {r: 1, g: 0.1013204, b: 0.035294116, a: 1}
+  m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -2058,7 +2053,7 @@ Transform:
   m_GameObject: {fileID: 701325900}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 69.68748, y: 0.2682112, z: -0.055983692}
+  m_LocalPosition: {x: 82.71, y: 0.95, z: -0.055983692}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3006,7 +3001,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.545
   m_Color: {r: 1, g: 0.8305459, b: 0, a: 1}
-  m_Intensity: 0.3
+  m_Intensity: 0.4
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000

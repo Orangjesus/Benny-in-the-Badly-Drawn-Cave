@@ -706,9 +706,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc10449f7a389fa4591fde5adcaf41da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isJumping: 0
   jumpPower: 10
   rb: {fileID: 475635668}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  groundCheck: {fileID: 475635664}
+  groundCheckRadius: 0.1
 --- !u!114 &475635666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2382,7 +2386,6 @@ MonoBehaviour:
   Player: {fileID: 475635663}
   Respawn: {fileID: 1233014971}
   CombatSprite: {fileID: -3694158963734054078, guid: 738a6cc42b9910f4bb9c63f95ec33f73, type: 3}
-  textToDisplay: ERASED!
 --- !u!1 &1409112152
 GameObject:
   m_ObjectHideFlags: 0

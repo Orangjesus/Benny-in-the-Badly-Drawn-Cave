@@ -17,13 +17,7 @@ public class JumpController : MonoBehaviour
     private bool isGrounded;
 
 
-    private void OnCollisionEnter2D(UnityEngine.Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
+
     // Update is called once per frame
     void Update()
     {

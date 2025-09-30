@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections;
+using System;
 
 
 
-    public class PlayerCombat : MonoBehaviour
+public class PlayerCombat : MonoBehaviour
     {
         public int damage;
         public float attackRange;
@@ -15,8 +17,12 @@ using UnityEngine;
           SpriteRenderer = GetComponent<SpriteRenderer>();
         }
 
+
+
         void Update()
         {
+
+
          if (Input.GetKeyDown(KeyCode.F))
          {
 
@@ -28,8 +34,7 @@ using UnityEngine;
             SpriteRenderer.sprite = IdleSprite[0];
          }
          if (Input.GetKeyDown(KeyCode.F))
-            {
-                // Find all active Painteater objects in the scene
+            {             
                 GameObject[] painteaters = GameObject.FindGameObjectsWithTag("Enemy");
                 GameObject closestPainteater = null;
                 float closestDistance = Mathf.Infinity;
@@ -46,13 +51,20 @@ using UnityEngine;
                         }
                     }
                 }
+            if (closestPainteater != null && closestDistance <= attackRange)
+            {
+                closestPainteater.SetActive(false);
 
-                // Destroy the closest Painteater if within attack range
-                if (closestPainteater != null && closestDistance <= attackRange)
+                StartCoroutine(RespawnEnemies());
+
+                IEnumerator RespawnEnemies()
                 {
-                    Destroy(closestPainteater);
+                    closestPainteater.SetActive(false);
+                    yield return new WaitForSeconds(5);
+                    closestPainteater.SetActive(true);
                 }
             }
+        }
         }
     }
 

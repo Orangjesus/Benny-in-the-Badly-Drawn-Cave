@@ -25,7 +25,7 @@ public class JumpController : MonoBehaviour
            if(Physics2D.Raycast(transform.position, Vector2.down, 0.55f))
            {
                 GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
-            }
+           }
         }
       
         if (Input.GetKeyUp(KeyCode.Space) && rb.linearVelocity.y > 0)

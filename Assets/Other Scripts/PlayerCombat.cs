@@ -16,6 +16,8 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+
+       
     }
 
 

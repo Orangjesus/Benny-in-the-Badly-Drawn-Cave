@@ -1649,7 +1649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  attackRange: 2
+  attackRange: 2.5
   IdleSprite:
   - {fileID: 1838654093030196926, guid: 2ed2f1f552cb0214f908588b253392bc, type: 3}
   CombatSprite: {fileID: -3694158963734054078, guid: 738a6cc42b9910f4bb9c63f95ec33f73, type: 3}

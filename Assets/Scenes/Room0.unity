@@ -931,7 +931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RB: {fileID: 854366751}
-  Movespeed: 10
+  Movespeed: 8
 --- !u!114 &854366755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -944,10 +944,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc10449f7a389fa4591fde5adcaf41da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isJumping: 0
-  jumpPower: 5
+  jumpPower: 10
   rb: {fileID: 854366751}
-  DashDistance: 0
 --- !u!1 &1000097900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,7 +1093,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73a85b1d1eeddf3418f51bedce37ae53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Door: {fileID: 1000097900}
 --- !u!1 &1021187756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,6 +2942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1194bc3ea2cf04f9cd307fab996bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCombat: {fileID: 0}
 --- !u!1 &2010696291
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,10 @@ using UnityEngine;
 public class EnemyDamage : MonoBehaviour
 {
     public HealthScript healthScript;
-    private GameObject PaintEater;
     void Start()
     {
         GetComponent<PlayerCombat>();
-        GetComponent<PlayerMovement>();
-
-       
+        GetComponent<PlayerMovement>();    
     }
 
 

@@ -5,52 +5,53 @@ using System;
 
 
 public class PlayerCombat : MonoBehaviour
-    {
-        public int damage;
-        public float attackRange;
+{
+    public int damage;
+    public float attackRange;
     public Sprite[] IdleSprite;
     public Sprite CombatSprite;
+    public Sprite EraserSprite;
     SpriteRenderer SpriteRenderer;
 
     void Start()
+    {
+        SpriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+
+
+    void Update()
+    {
+
+
+        if (Input.GetKeyDown(KeyCode.F))
         {
-          SpriteRenderer = GetComponent<SpriteRenderer>();
-        }
-
-
-
-        void Update()
-        {
-
-
-         if (Input.GetKeyDown(KeyCode.F))
-         {
 
             SpriteRenderer.sprite = CombatSprite;
 
-         }
-         else if (Input.GetKeyUp(KeyCode.F))
-         {
+        }
+        else if (Input.GetKeyUp(KeyCode.F))
+        {
             SpriteRenderer.sprite = IdleSprite[0];
-         }
-         if (Input.GetKeyDown(KeyCode.F))
-            {             
-                GameObject[] painteaters = GameObject.FindGameObjectsWithTag("Enemy");
-                GameObject closestPainteater = null;
-                float closestDistance = Mathf.Infinity;
+        }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            GameObject[] painteaters = GameObject.FindGameObjectsWithTag("Enemy");
+            GameObject closestPainteater = null;
+            float closestDistance = Mathf.Infinity;
 
-                foreach (GameObject pe in painteaters)
+            foreach (GameObject pe in painteaters)
+            {
+                if (pe.activeInHierarchy)
                 {
-                    if (pe.activeInHierarchy)
+                    float distance = Vector3.Distance(transform.position, pe.transform.position);
+                    if (distance < closestDistance)
                     {
-                        float distance = Vector3.Distance(transform.position, pe.transform.position);
-                        if (distance < closestDistance)
-                        {
-                            closestDistance = distance;
-                            closestPainteater = pe;
-                        }
+                        closestDistance = distance;
+                        closestPainteater = pe;
                     }
                 }
+            }
             if (closestPainteater != null && closestDistance <= attackRange)
             {
                 closestPainteater.SetActive(false);
@@ -65,6 +66,47 @@ public class PlayerCombat : MonoBehaviour
                 }
             }
         }
+
+        Eraser();
+
+    }
+    
+    public void Eraser()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SpriteRenderer.sprite = EraserSprite;
+            GameObject[] PencilLead = GameObject.FindGameObjectsWithTag("Graphite");
+            GameObject closestPencilLead = null;
+            float closestDistance = Mathf.Infinity;
+
+            foreach (GameObject pe in PencilLead)
+            {
+                if (pe.activeInHierarchy)
+                {
+                    float distance = Vector3.Distance(transform.position, pe.transform.position);
+                    if (distance < closestDistance)
+                    {
+                        closestDistance = distance;
+                        closestPencilLead = pe;
+                    }
+                }
+            }
+            if (closestPencilLead != null && closestDistance <= attackRange)
+            {
+                closestPencilLead.SetActive(false);
+
+            }
+        }
+        else if (Input.GetKeyUp(KeyCode.E))
+        {
+            SpriteRenderer.sprite = IdleSprite[0];
         }
     }
+
+    internal static void Eraser(bool v)
+    {
+        throw new NotImplementedException();
+    }
+}
 

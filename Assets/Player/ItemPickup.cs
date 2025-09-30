@@ -14,9 +14,8 @@ public class ItemPickup : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-       void OnTriggerEnter2D(Collider2D other)
+ 
+        void OnTriggerEnter2D(Collider2D other)
         {
             bool hasSword = false;
             other.GetComponent<PlayerCombat>();
@@ -27,5 +26,5 @@ public class ItemPickup : MonoBehaviour
                 other.GetComponent<PlayerCombat>();
             }
         }
-    }
+    
 }

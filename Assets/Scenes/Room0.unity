@@ -620,7 +620,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.2
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -768,6 +768,7 @@ GameObject:
   - component: {fileID: 854366750}
   - component: {fileID: 854366754}
   - component: {fileID: 854366755}
+  - component: {fileID: 854366756}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -946,6 +947,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpPower: 10
   rb: {fileID: 854366751}
+--- !u!114 &854366756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 854366749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 941b1eee7893a0448a1ca9cb14d288c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  attackRange: 0
+  IdleSprite:
+  - {fileID: 1838654093030196926, guid: 2ed2f1f552cb0214f908588b253392bc, type: 3}
+  CombatSprite: {fileID: -3694158963734054078, guid: 738a6cc42b9910f4bb9c63f95ec33f73, type: 3}
+  EraserSprite: {fileID: 0}
 --- !u!1 &1000097900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2942,7 +2961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e1194bc3ea2cf04f9cd307fab996bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCombat: {fileID: 0}
+  playerCombat: {fileID: 854366756}
 --- !u!1 &2010696291
 GameObject:
   m_ObjectHideFlags: 0

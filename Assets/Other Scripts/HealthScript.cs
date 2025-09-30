@@ -11,17 +11,19 @@ public class HealthScript : MonoBehaviour
     public GameObject Player;
     public Transform Respawn;
     public Sprite CombatSprite;
+    public GameObject Gameover;
  
 
 
     void Start()
     {
-       
+        Gameover.SetActive(false);
     }
 
     IEnumerator RespawnPlayer()
     {
         Player.SetActive(false);
+        Gameover.SetActive(true);
 
         yield return new WaitForSeconds(2);
       
@@ -30,6 +32,7 @@ public class HealthScript : MonoBehaviour
         HealthAmount = 20;
         HealthBar.fillAmount = 1;
         Player.SetActive(true);
+        Gameover.SetActive(false);
     }
 
 

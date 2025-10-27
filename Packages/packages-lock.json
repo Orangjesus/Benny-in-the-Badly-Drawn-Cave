@@ -42,7 +42,7 @@
       }
     },
     "com.unity.burst": {
-      "version": "1.8.21",
+      "version": "1.8.24",
       "depth": 2,
       "source": "registry",
       "dependencies": {
